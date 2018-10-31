@@ -1,36 +1,50 @@
 $(document).ready(function () {
-  // alert("Welcome!")
   var thermostat = new Thermostat();
-  $('#temperature').text(thermostat.temp())
-  $('#temperature').attr('class', thermostat.energyUsage())
+  updateTemperature();
+  updatePowerSave();
+  updatePowerUsage();
+  updateColour();
+
   $('#temperature-up').click(function() {
     thermostat.increaseTemp();
-    $('#temperature').text(thermostat.temp());
-    $('#power-usage').text(thermostat.energyUsage())
-    $('#temperature').attr('class', thermostat.energyUsage())
+    updateTemperature();
+    updatePowerUsage();
+    updateColour();
   })
   $('#temperature-down').click(function() {
     thermostat.decreaseTemp();
-    $('#temperature').text(thermostat.temp());
-    $('#power-usage').text(thermostat.energyUsage())
-    $('#temperature').attr('class', thermostat.energyUsage())
+    updateTemperature();
+    updatePowerUsage();
+    updateColour();
   })
   $('#temperature-reset').click(function() {
     thermostat.reset();
-    $('#temperature').text(thermostat.temp());
-    $('#power-usage').text(thermostat.energyUsage())
-    $('#temperature').attr('class', thermostat.energyUsage())
+    updateTemperature();
+    updatePowerUsage();
+    updateColour();
   })
   $('#power-saving-on').click(function() {
     thermostat.powerSaveOn();
-    $('#power-saving-mode').text(thermostat.powerSave())
+    updatePowerSave();
   })
   $('#power-saving-off').click(function() {
     thermostat.powerSaveOff();
-    $('#power-saving-mode').text(thermostat.powerSave())
+    updatePowerSave();
   })
-  $('#power-saving-mode').text(thermostat.powerSave())
 
-  $('#power-usage').text(thermostat.energyUsage())
+  function updateTemperature() {
+    $('#temperature').text(thermostat.temp())
+  }
 
+  function updatePowerSave() {
+    $('#power-saving-mode').text(thermostat.powerSave())
+  }
+
+  function updatePowerUsage() {
+    $('#power-usage').text(thermostat.energyUsage())
+  }
+
+  function updateColour() {
+    $('#temperature').attr('class', thermostat.energyUsage())
+  }
 });
