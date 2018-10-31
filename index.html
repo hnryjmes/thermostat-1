@@ -3,22 +3,21 @@
   <head>
     <title>Welcome to thermostat.com!</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        alert("Welcome!")
-      });
-    </script>
+    <script src='src/Thermostat.js'></script>
+    <script src='src/ThermostatInterface.js'></script>
+    <link rel='stylesheet' type='text/css' href='style/stylesheet.css'>
   </head>
   <body>
     <section>
-    <h1 id="temperature"></h1>
+    <h1>The temperature right now is <span id="temperature"></span></h1>
       <p>
         <button id="temperature-up">+</button>
         <button id="temperature-down">-</button>
         <button id="temperature-reset">Reset Temperature</button>
-        Power saving mode is <span id="power-saving-mode">on</span>
+        Power saving mode is <span id="power-saving-mode"></span>
         <button id="power-saving-on">Power Saving On</button>
         <button id="power-saving-off">Power Saving Off</button>
+        Usage: <span id="power-usage"></span>
       </p>
     </section>
   </body>

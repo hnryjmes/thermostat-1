@@ -33,14 +33,14 @@ describe('Thermostat', function() {
   });
   describe('powersave defaults to on', function() {
     it ('starts with powersaving on', function() {
-      expect(thermostat.powerSave()).toEqual(true);
+      expect(thermostat.powerSave()).toEqual('on');
     });
   });
 
   describe('powersave can be turned off', function() {
     it ('turns powersave off', function() {
       thermostat.powerSaveOff();
-      expect(thermostat.powerSave()).toEqual(false);
+      expect(thermostat.powerSave()).toEqual('off');
     });
   });
 
@@ -48,7 +48,7 @@ describe('Thermostat', function() {
     it ('turns powersave on', function() {
       thermostat.powerSaveOff();
       thermostat.powerSaveOn();
-      expect(thermostat.powerSave()).toEqual(true);
+      expect(thermostat.powerSave()).toEqual('on');
     });
   });
 
@@ -86,16 +86,16 @@ describe('Thermostat', function() {
       for (var i = 0; i < 3; i++) {
         thermostat.decreaseTemp();
       }
-      expect(thermostat.energyUsage()).toEqual('Low Usage');
+      expect(thermostat.energyUsage()).toEqual('Low');
     });
     it ('returns medium usage when temp is between 18 & 25', function() {
-      expect(thermostat.energyUsage()).toEqual('Medium Usage');
+      expect(thermostat.energyUsage()).toEqual('Medium');
     });
     it ('returns high usage when temp is above 25', function() {
       for (var i = 0; i < 7; i++) {
         thermostat.increaseTemp();
       }
-      expect(thermostat.energyUsage()).toEqual('High Usage');
+      expect(thermostat.energyUsage()).toEqual('High');
     });
   });
 
