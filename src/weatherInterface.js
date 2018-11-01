@@ -1,4 +1,3 @@
 $(document).ready(function () {
-  // $.get('https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22');
-  // console.log(data);
+  $.get('https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=228203a5380aed8adfe651896e6bfdfc');
 });
