@@ -9,20 +9,31 @@
     <link rel='stylesheet' type='text/css' href='style/stylesheet.css'>
   </head>
   <body>
-    <section>
-    <h1>The temperature right now is <span id="temperature"></span></h1>
+    <section class='container'>
+    <h1>Your temperature right now is <span id="temperature"></span></h1>
       <p>
-        <button id="temperature-up">+</button>
-        <button id="temperature-down">-</button>
-        <button id="temperature-reset">Reset Temperature</button>
-        Power saving mode is <span id="power-saving-mode"></span>
-        <button id="power-saving-on">Power Saving On</button>
-        <button id="power-saving-off">Power Saving Off</button>
-        Usage: <span id="power-usage"></span>
+        <div>
+          <button id="temperature-up">+</button>
+          <button id="temperature-down">-</button>
+          <button id="temperature-reset">Reset Temperature</button>
+        </div>
+        <br>
+        <div>
+          Power saving mode is <span id="power-saving-mode"></span>
+          <button id="power-saving-on">Power Saving On</button>
+          <button id="power-saving-off">Power Saving Off</button>
+        </div>
+        <br>
+        <div>
+          Usage: <span id="power-usage"></span>
+        </div>
+        <br>
       </p>
-      <input id="input-city" type="text" placeholder="Enter city">
-      <button type="button" id="search-button">Search</button>
-      <p><span id="city-name"></span><span id="current-temperature"></span></p>
+      <p> Find your city
+        <input id="input-city" type="text" placeholder="Enter city">
+        <button type="button" id="search-button">Search</button><br>
+        <span id="city-name"></span><span id="current-temperature"></span>
+    </p>
     </section>
   </body>
 </html>

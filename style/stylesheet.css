@@ -1,4 +1,17 @@
 
+body {
+  font-family: sans-serif;
+  background-color: #c0ded9;
+  text-align: center;
+}
+
+.container{
+  background-color: #f0f0f0;
+  padding: 5%;
+  margin: 10%;
+  border-radius: 0.5em;
+}
+
 .Low {
   color: green;
 }
